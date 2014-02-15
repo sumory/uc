@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+	<datasource name="uucampus_core">
+		<property name="username">root</property>
+		<property name="password">MhxzKhl2012</property>
+		<property name="url">jdbc:mysql://edusns2:3306/uucampus_core</property>
+		<property name="driverClassName">com.mysql.jdbc.Driver</property>
+		<property name="connectionProperties">useUnicode=true;characterEncoding=utf8;autoReconnect=true</property>
+		<property name="initialSize">10</property>
+		<property name="maxActive">20</property>
+		<property name="maxIdle">10</property>
+		<property name="minIdle">5</property>
+		<property name="maxWait">300000</property><!-- 5分钟 -->
+		<property name="removeAbandoned">true</property>
+		<property name="removeAbandonedTimeout">60</property> <!-- 1分钟 -->
+		<property name="logAbandoned">true</property>
+	</datasource>
+</datasources>

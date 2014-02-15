@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-selector>
+	<default-write-datasource>uucampus_core</default-write-datasource>
+	<default-read-datasource>uucampus_core</default-read-datasource>
+	<!-- ***************************************** user ***********************************************-->
+	<split-table name="user">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>user0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>user1</table>
+		</item>
+	</split-table>
+	<!-- ***************************************** group ***********************************************-->
+	<split-table name="group">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>group0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>group1</table>
+		</item>
+	</split-table>
+	<!-- ***************************************** index_group_user ***********************************-->
+	<split-table name="index_group_user">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_user0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_user1</table>
+		</item>
+	</split-table>
+	<!-- ***************************************** index_user_group************************************-->
+	<split-table name="index_user_group">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_group0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_group1</table>
+		</item>
+	</split-table>
+	<!-- ***************************************** index_group_has_group******************************-->
+	<split-table name="index_group_has_group">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_has_group0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_has_group1</table>
+		</item>
+	</split-table>
+	<!-- ***************************************** broadcast******************************-->
+	<split-table name="broadcast">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>broadcast0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>broadcast1</table>
+		</item>
+	</split-table>
+	<!-- ***************************************** feed******************************-->
+	<split-table name="feed">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>feed0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>feed1</table>
+		</item>
+	</split-table>
+	<!-- ***************************************** feed_count*****************************-->
+	<split-table name="feed_count">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>feed_count0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>feed_count1</table>
+		</item>
+	</split-table>
+	<!-- ***************************************** index_user_feed******************************-->
+	<split-table name="index_user_feed">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_feed0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_feed1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  contacttag ***********************************************-->
+	<split-table name="contacttag">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>contacttag0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>contacttag1</table>
+		</item>
+	</split-table>
+		<!-- *****************************************  user_count ***********************************************-->
+	<split-table name="user_count">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>user_count0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>user_count1</table>
+		</item>
+	</split-table>
+		<!-- *****************************************  index_user_follower ***********************************************-->
+	<split-table name="index_user_follower">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_follower0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_follower1</table>
+		</item>
+	</split-table>
+		<!-- *****************************************  index_user_contact ***********************************************-->
+	<split-table name="index_user_contact">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_contact0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_contact1</table>
+		</item>
+	</split-table>
+		<!-- *****************************************  group_count ***********************************************-->
+	<split-table name="group_count">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>group_count0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>group_count1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  index_group_app ***********************************************-->
+	<split-table name="index_group_app">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_app0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_app1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  index_group_appsetting ***********************************************-->
+	<split-table name="index_group_appsetting">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_appsetting0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_appsetting1</table>
+		</item>
+	</split-table>
+
+	
+	
+	
+	
+	<!-- *****************************************  groupfeed ***********************************************-->
+	<split-table name="groupfeed">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>groupfeed0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>groupfeed1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  index_user_own_feed ***********************************************-->
+	<split-table name="index_user_own_feed">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_own_feed0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_own_feed1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  index_user_groupfeed ***********************************************-->
+	<split-table name="index_user_groupfeed">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_groupfeed0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_groupfeed1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  index_group_groupfeed ***********************************************-->
+	<split-table name="index_group_groupfeed">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_groupfeed0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_groupfeed1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  groupfeed_count ***********************************************-->
+	<split-table name="groupfeed_count">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>groupfeed_count0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>groupfeed_count1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  index_user_own_feed ***********************************************-->
+	<split-table name="index_user_own_feed">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_own_feed0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_own_feed1</table>
+		</item>
+	</split-table>
+		<!-- *****************************************  index_user_notification ***********************************************-->
+	<split-table name="index_user_notification">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_notification0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_notification1</table>
+		</item>
+	</split-table>
+	
+	<!-- *****************************************  message ***********************************************-->
+	<split-table name="message">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>message0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>message1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  dialog ***********************************************-->
+	<split-table name="dialog">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>dialog0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>dialog1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  index_user_msg ***********************************************-->
+	<split-table name="index_user_msg">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_msg0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_msg1</table>
+		</item>
+	</split-table>	
+	<!-- *****************************************  comment ***********************************************-->
+	<split-table name="comment">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>comment0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>comment1</table>
+		</item>
+	</split-table>	
+	<!-- *****************************************  index_feed_comment ***********************************************-->
+	<split-table name="index_feed_comment">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_feed_comment0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_feed_comment1</table>
+		</item>
+	</split-table>	
+	<!-- *****************************************  index_groupfeed_comment ***********************************************-->
+	<split-table name="index_groupfeed_comment">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_groupfeed_comment0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_groupfeed_comment1</table>
+		</item>
+	</split-table>	
+	<!-- *****************************************  index_user_comment ***********************************************-->
+	<split-table name="index_user_comment">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_comment0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_comment1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  index_user_calendar ***********************************************-->
+	<split-table name="index_user_calendar">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_calendar0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_calendar1</table>
+		</item>
+	</split-table>
+		<!-- *****************************************  index_group_calendar ***********************************************-->
+	<split-table name="index_group_calendar">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_calendar0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_calendar1</table>
+		</item>
+	</split-table>	
+		<!-- *****************************************  index_assignment_comment  ***********************************************-->
+	<split-table name="index_assignment_comment">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_assignment_comment0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_assignment_comment1</table>
+		</item>
+	</split-table>	
+			<!-- *****************************************  assignment  ***********************************************-->
+	<split-table name="assignment">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>assignment0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>assignment1</table>
+		</item>
+	</split-table>	
+	<!-- *****************************************  index_group_assignment  ***********************************************-->
+	<split-table name="index_group_assignment">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_assignment0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_assignment1</table>
+		</item>
+	</split-table>
+	<!-- *****************************************  index_group_user_assignment  ***********************************************-->
+	<split-table name="index_group_user_assignment">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_user_assignment0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_group_user_assignment1</table>
+		</item>
+	</split-table>		
+		<!-- *****************************************  index_user_answer  ***********************************************-->
+	<split-table name="index_user_answer">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_answer0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_answer1</table>
+		</item>
+	</split-table>	
+			<!-- *****************************************  index_user_notice  ***********************************************-->
+	<split-table name="index_user_notice">
+		<divisor>2</divisor>
+		<item>
+				<mod>0</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_notice0</table>
+		</item>
+		<item>
+				<mod>1</mod>
+				<write-datasource>uucampus_core</write-datasource>
+				<read-datasource>uucampus_core</read-datasource>
+				<table>index_user_notice1</table>
+		</item>
+	</split-table>	
+</db-selector>

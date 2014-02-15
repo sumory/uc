@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build" name="com.sumory.uc">
+	<property name="src" value="src" />
+	<property name="lib" value="lib" />
+	<property name="conf" value="conf" />
+	<property name="classes" value="classes" />
+	<property name="release" value="release" />
+	<property name="test" value="test" />
+
+	<path id="project.classpath">
+		<pathelement location="${classes}" />
+		<fileset dir="${lib}" includes="*.jar" />
+	</path>
+
+	<target name="init">
+		<delete dir="${classes}" />
+		<mkdir dir="${classes}" />
+		<delete dir="${release}" />
+		<mkdir dir="${release}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac destdir="${classes}" encoding="UTF8" includeantruntime="false" debug="true" debuglevel="lines,source">
+			<src path="${src}" />
+			<classpath refid="project.classpath" />
+		</javac>
+		<javac destdir="${classes}" encoding="UTF8" includeantruntime="false" debug="true" debuglevel="lines,source">
+			<src path="${test}" />
+			<classpath refid="project.classpath" />
+		</javac>
+		<copy todir="${classes}">
+			<fileset dir="${conf}" />
+		</copy>
+	</target>
+
+	<target name="run" depends="compile">
+		<java classname="com.sumory.uc.main.Server">
+			<classpath refid="project.classpath" />
+		</java>
+	</target>
+
+	<target name="build" depends="compile">
+		<jar jarfile="${release}/com.sumory.uc.jar" basedir="${classes}" />
+	</target>
+
+
+	<target name="server-compile" depends="init">
+		<javac destdir="${classes}" encoding="UTF8" includeantruntime="false" debug="true" debuglevel="lines,source">
+			<src path="${src}" />
+			<classpath refid="project.classpath" />
+		</javac>
+		<copy todir="${classes}">
+			<fileset dir="${conf}/server" />
+		</copy>
+	</target>
+
+
+
+	<target name="server-build" depends="server-compile">
+		<jar jarfile="${release}/com.sumory.uc.jar" basedir="${classes}" />
+		<delete dir="${src}" />
+		<delete dir="${classes}" />
+		<delete dir="${test}" />
+		<delete dir="${conf}" />
+		<delete file="build.xml" />
+	</target>
+
+
+	<target name="test-server-compile" depends="init">
+		<javac destdir="${classes}" encoding="UTF8" includeantruntime="false" debug="true" debuglevel="lines,source">
+			<src path="${src}" />
+			<classpath refid="project.classpath" />
+		</javac>
+		<copy todir="${classes}">
+			<fileset dir="${conf}/test-server" />
+		</copy>
+	</target>
+
+
+	<target name="test-server-build" depends="test-server-compile">
+		<jar jarfile="${release}/com.sumory.uc.jar" basedir="${classes}" />
+		<delete dir="${src}" />
+		<delete dir="${classes}" />
+		<delete dir="${test}" />
+		<delete dir="${conf}" />
+		<delete file="build.xml" />
+	</target>
+
+
+
+	<target name="clean">
+		<delete dir="${classes}" />
+		<delete dir="${release}" />
+	</target>
+</project>

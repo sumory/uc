@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uc>
+	<default-user-worker-id>1</default-user-worker-id>
+	<default-group-worker-id>2</default-group-worker-id>
+	<default-app-worker-id>3</default-app-worker-id>
+	<default-contacttag-worker-id>4</default-contacttag-worker-id>
+	<default-filetag-worker-id>5</default-filetag-worker-id>
+	<default-feed-worker-id>100</default-feed-worker-id>
+	<default-comment-worker-id>200</default-comment-worker-id>
+	<default-store-worker-id>300</default-store-worker-id>
+	<default-broadcast-worker-id>400</default-broadcast-worker-id>
+	<default-msg-worker-id>500</default-msg-worker-id>
+	<default-calendar-worker-id>600</default-calendar-worker-id>
+	<default-assignment-worker-id>700</default-assignment-worker-id>
+	<default-answer-worker-id>800</default-answer-worker-id>
+	<default-notice-worker-id>900</default-notice-worker-id>
+	<default-judgement-worker-id>1000</default-judgement-worker-id>
+	<username-expiry>60000</username-expiry>
+	<email-expiry>60000</email-expiry>
+	<username-prefix>u_</username-prefix>
+	<email-prefix>e_</email-prefix>
+	<mc>
+		<mc-node>edusns1:11211</mc-node><!-- 默认端口号 -->
+	</mc>
+</uc>
